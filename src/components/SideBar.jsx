@@ -29,7 +29,7 @@ const Sidebar = ({ role }) => {
         { name: 'All Courses', icon: '📖', path: '/user/all-courses' },
         { name: 'Enrolled Courses', icon: '📚', path: '/user/enrolled-courses' },
         { name: 'Certifications', icon: '🎓', path: '/user/certification' },
-        { name: 'Notifications', icon: '🔔', path: '/user/notification' },
+        { name: 'To-Do List', icon: '🔔', path: '/user/notification' },
         { name: 'Profile Management', icon: '👤', path: '/user/profile-management' },
         { name: 'Quiz', icon: '📝', path: '/user/quiz' },
     ];

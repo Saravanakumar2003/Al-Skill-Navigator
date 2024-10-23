@@ -1,32 +1,37 @@
 # Hexaware AI Skill Navigator
 
-![Hexaware AI Skill Navigator](https://img.shields.io/badge/version-0.1-blue.svg)
+![Hexaware AI Skill Navigator](https://img.shields.io/badge/version-0.2-blue.svg)
 
 ## Team: Square_Velammal_Engg
 
 Welcome to the Hexaware AI Skill Navigator, a powerful platform designed to help users chart their learning journeys, enhance their skills, and achieve their career goals through AI-driven recommendations and gamified learning experiences.
 
 ### Table of Contents
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Current Progress](#current-progress)
-- [Future Roadmap](#future-roadmap)
-- [Contributing](#contributing)
-- [License](#license)
+- [Hexaware AI Skill Navigator](#hexaware-ai-skill-navigator)
+  - [Team: Square\_Velammal\_Engg](#team-square_velammal_engg)
+    - [Table of Contents](#table-of-contents)
+  - [Project Overview](#project-overview)
+  - [Features](#features)
+  - [Tech Stack](#tech-stack)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Current Progress](#current-progress)
+  - [Future Roadmap](#future-roadmap)
+  - [Team Members](#team-members)
+  - [License](#license)
 
 ## Project Overview
 Hexaware AI Skill Navigator is an innovative application built to guide users through personalized learning paths using AI. The application is designed to help users improve their skills through interactive learning modules, real-time feedback, and collaborative tools. It integrates advanced technologies like Firebase and AI to provide a seamless and secure experience.
 
 ## Features
 - **Authentication**: Google & GitHub authentication.
-- **Role-Centric Signup**: Users can sign up as Admin, Instructor, or Candidate.
+- **Role-Centric Signup**: Users can sign up as Admin, or User.
 - **Profile Setup**: Candidates can set up profiles and store certificates securely in Firebase Storage.
-- **AI-Powered Learning Paths**: Personalized learning recommendations based on user profiles and performance.
-- **Gamified Learning**: Leaderboards, badges, and goals with friends to encourage engagement.
 - **Security**: HiCaptcha integration to ensure secure access.
+- **Certifications**: Candidates will recieve certificates upon completion of courses.
+- **AI-Powered Learning Paths**: Personalized learning recommendations based on user profiles and performance.(In progress)
+- **Gamified Learning**: Leaderboards, badges, and goals with friends to encourage engagement. (In progress)
+
 
 ## Tech Stack
 - **Frontend**: HTML, CSS, JavaScript, React.js
@@ -63,7 +68,7 @@ To get started with the project locally:
 ## Current Progress
 - **Implemented Features**:
   - Google & GitHub Authentication
-  - Role-Centric Signup (Admin, Instructor, Candidate)
+  - Role-Centric Signup (Admin, User)
   - Candidate Profile Setup with Firebase Storage
   - HiCaptcha Integration
   - AI for Learning Path recommendation (In progress)

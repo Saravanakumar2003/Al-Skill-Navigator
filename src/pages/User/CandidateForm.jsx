@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getAuth } from 'firebase/auth';
 import { db, storage } from '../../config/firebaseConfig'; // Adjust the import path as needed
-import { doc, setDoc } from 'firebase/firestore';
+import { doc, setDoc, getDoc, updateDoc, arrayUnion, collection, query, where, getDocs } from 'firebase/firestore';
 import { uploadBytes, getDownloadURL } from 'firebase/storage';
 import { ref } from 'firebase/storage';
 
 const CandidateForm = () => {
   const auth = getAuth();
   const user = auth.currentUser;
+  const [enrollmentLoading, setEnrollmentLoading] = useState(false);
+  const [userId, setUserId] = useState(null);
   const navigate = useNavigate();
   const [candidate, setCandidate] = useState({
     name: '',
@@ -29,6 +31,17 @@ const CandidateForm = () => {
     profilePicture: null,
   });
 
+  useEffect(() => {
+    const auth = getAuth();
+    const user = auth.currentUser;
+    if (user) {
+      setUserId(user.uid);
+      console.log('User ID set:', user.uid);
+    } else {
+      console.error('No user is signed in');
+    }
+  }, []);
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setCandidate((prevCandidate) => ({
@@ -83,11 +96,75 @@ const CandidateForm = () => {
       await setDoc(doc(db, 'users', user.uid), candidateData);
       alert('Form submitted successfully');
 
+      console.log('Form submitted, calling confirmEnrollment');
+      await confirmEnrollment();
+
       // Navigate to dashboard
       navigate('/user');
+
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("Error submitting form: " + error.message);
+    }
+  };
+
+  const confirmEnrollment = async () => {
+    if (!userId) {
+      console.error('User is not authenticated');
+      return;
+    }
+
+    setEnrollmentLoading(true);
+
+    try {
+      const userRef = doc(db, 'users', userId);
+      const userDoc = await getDoc(userRef);
+
+      let courseToEnroll = null;
+
+      if (userDoc.exists()) {
+        const userCertifications = userDoc.data().certifications || [];
+
+        if (userCertifications.includes('AWS') || userCertifications.includes('Java')) {
+          courseToEnroll = 'Java';
+        } else if (userCertifications.includes('Azure') || userCertifications.includes('.NET')) {
+          courseToEnroll = '.NET';
+        } else if (userCertifications.includes('Python')) {
+          courseToEnroll = 'Data Engineering';
+        }
+      }
+
+      if (courseToEnroll) {
+        const coursesRef = collection(db, 'courses');
+        const q = query(coursesRef, where('name', '==', courseToEnroll));
+        const querySnapshot = await getDocs(q);
+
+        if (!querySnapshot.empty) {
+          const courseDoc = querySnapshot.docs[0];
+          const courseId = courseDoc.id;
+
+          if (!userDoc.exists()) {
+            await setDoc(userRef, {
+              enrolledCourses: [courseId],
+            });
+          } else {
+            await updateDoc(userRef, {
+              enrolledCourses: arrayUnion(courseId),
+            });
+          }
+
+          alert(`You are enrolled in the ${courseToEnroll} course because you have the relevant certification.`);
+          navigate('/user/enrolled-courses');
+        } else {
+          alert(`Course ${courseToEnroll} not found in Firestore.`);
+        }
+      } else {
+        alert('No matching course found for the user certifications.');
+      }
+    } catch (error) {
+      console.error('Error enrolling in course:', error);
+    } finally {
+      setEnrollmentLoading(false);
     }
   };
 

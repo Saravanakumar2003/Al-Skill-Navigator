@@ -8,6 +8,8 @@ import AvailableCourses from './AvailableCourses'
 import EnrolledCoursePage from './EnrolledCoursePage'
 import CandidateForm from './CandidateForm'
 import Feedback from './Feedback'
+import CandidateReport from './CandidateReport';
+
 
 export {
     Certification,
@@ -19,5 +21,6 @@ export {
     EnrolledCourses,
     EnrolledCoursePage,
     CandidateForm,
-    Feedback
+    Feedback,
+    CandidateReport,
 }

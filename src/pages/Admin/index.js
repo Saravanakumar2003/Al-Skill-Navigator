@@ -8,6 +8,7 @@ import VideoUpload from './VideoUpload'
 import AddQuiz from './AddQuiz'
 import ViewQuizzes from './ViewQuizzes'
 import AdminProfile from './AdminProfile'
+import AdminFeedback from './AdminFeedback'
 
 export {
     AddCourse,
@@ -19,5 +20,6 @@ export {
     VideoUpload,
     AddQuiz,
     ViewQuizzes,
-    AdminProfile
+    AdminProfile,
+    AdminFeedback
 }

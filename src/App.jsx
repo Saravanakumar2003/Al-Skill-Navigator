@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import { Certification, AvailableCourses, EnrolledCourses, Notifications, ProfileManagement, Quiz, UserDashboard, EnrolledCoursePage, CandidateForm, Feedback } from './pages/User/index';
+import { Certification, AvailableCourses, EnrolledCourses, Notifications, ProfileManagement, Quiz, UserDashboard, EnrolledCoursePage, CandidateForm, Feedback, CandidateReport } from './pages/User/index';
 
-import { AddCourse, AdminDashboard, DeleteCourse, EditCourse, AllCourses, CourseDetails, VideoUpload, AddQuiz, ViewQuizzes, AdminProfile } from './pages/Admin/index';
+import { AddCourse, AdminDashboard, DeleteCourse, EditCourse, AllCourses, CourseDetails, VideoUpload, AddQuiz, ViewQuizzes, AdminProfile, AdminFeedback } from './pages/Admin/index';
 
 import Auth from './pages/Auth';
 import NotFound from './pages/NotFound';
@@ -113,6 +113,7 @@ const App = () => {
                                 <Route path="/user/profile-management" element={<ProfileManagement />} />
                                 <Route path="/user/quiz" element={<Quiz />} />
                                 <Route path="/user/feedback" element={<Feedback />} />
+                                <Route path="/user/candidate-report" element={<CandidateReport />} />
                             </>
                         )}
                         {isAuthenticated && userRole === 'admin' && (
@@ -127,6 +128,7 @@ const App = () => {
                                 <Route path="/admin/add-quiz" element={<AddQuiz />} />
                                 <Route path="/admin/view-quiz" element={<ViewQuizzes />} />
                                 <Route path="/admin/profile-management" element={<AdminProfile />} />
+                                <Route path="/admin/admin-feedback" element={<AdminFeedback />} />
                             </>
                         )}
                         {/* Not found page */}

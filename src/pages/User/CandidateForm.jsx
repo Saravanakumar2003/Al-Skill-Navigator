@@ -29,6 +29,8 @@ const CandidateForm = () => {
     programmingLanguages: '',
     eCertificates: null,
     profilePicture: null,
+    role: '',
+    registrationDate: '',
   });
 
   useEffect(() => {
@@ -89,7 +91,9 @@ const CandidateForm = () => {
         ...candidate,
         eCertificates: eCertificateURLs,
         profilePicture: profilePictureURL,
-        isFormFilled: true
+        registrationDate: new Date().toISOString(),
+        isFormFilled: true,
+        role: 'user',
       };
 
       // Save candidate data to Firestore

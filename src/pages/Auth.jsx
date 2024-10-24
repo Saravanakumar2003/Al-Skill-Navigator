@@ -46,7 +46,7 @@ const Auth = ({ classes, setUserRole, setIsAuthenticated }) => {
                     if (userData.role === role) {
                         setEmail('');
                         setPassword('');
-                        navigate(role === 'admin' ? '/admin' : '/user');
+                        navigate(role === 'admin' ? '/admin' : (userData.isFormFilled ? '/user' : '/user/candidate-form'));
                         setIsAuthenticated(true);
                     } else {
                         setError('Incorrect role selected for this account.');
@@ -60,12 +60,18 @@ const Auth = ({ classes, setUserRole, setIsAuthenticated }) => {
                 const registrationDate = new Date().toISOString();
                 await setDoc(doc(db, 'users', userCredential.user.uid), {
                     role,
-                    registrationDate
+                    registrationDate,
+                    isFormFilled: false
                 });
+
                 setUserRole(role);
                 setEmail('');
                 setPassword('');
-                navigate(role === 'admin' ? '/admin' : '/user');
+                if (role === 'admin') {
+                    navigate('/admin');
+                } else {
+                    navigate('/user/candidate-form');
+                }
                 setIsAuthenticated(true);
             }
         } catch (error) {

@@ -32,6 +32,7 @@ const Sidebar = ({ role }) => {
         { name: 'To-Do List', icon: '🔔', path: '/user/notification' },
         { name: 'Profile Management', icon: '👤', path: '/user/profile-management' },
         { name: 'Quiz', icon: '📝', path: '/user/quiz' },
+        { name: 'Feedback', icon: '✍', path: '/user/feedback' }, 
     ];
 
     return (

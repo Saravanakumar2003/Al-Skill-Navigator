@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import { Certification, AvailableCourses, EnrolledCourses, Notifications, ProfileManagement, Quiz, UserDashboard, EnrolledCoursePage, CandidateForm } from './pages/User/index';
+import { Certification, AvailableCourses, EnrolledCourses, Notifications, ProfileManagement, Quiz, UserDashboard, EnrolledCoursePage, CandidateForm, Feedback } from './pages/User/index';
 
 import { AddCourse, AdminDashboard, DeleteCourse, EditCourse, AllCourses, CourseDetails, VideoUpload, AddQuiz, ViewQuizzes, AdminProfile } from './pages/Admin/index';
 
@@ -112,6 +112,7 @@ const App = () => {
                                 <Route path="/user/candidate-form" element={<CandidateForm />} />
                                 <Route path="/user/profile-management" element={<ProfileManagement />} />
                                 <Route path="/user/quiz" element={<Quiz />} />
+                                <Route path="/user/feedback" element={<Feedback />} />
                             </>
                         )}
                         {isAuthenticated && userRole === 'admin' && (

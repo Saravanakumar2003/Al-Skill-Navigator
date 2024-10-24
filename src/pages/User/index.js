@@ -7,6 +7,7 @@ import EnrolledCourses from './EnrolledCourses'
 import AvailableCourses from './AvailableCourses'
 import EnrolledCoursePage from './EnrolledCoursePage'
 import CandidateForm from './CandidateForm'
+import Feedback from './Feedback'
 
 export {
     Certification,
@@ -17,5 +18,6 @@ export {
     AvailableCourses,
     EnrolledCourses,
     EnrolledCoursePage,
-    CandidateForm
+    CandidateForm,
+    Feedback
 }

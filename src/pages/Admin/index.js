@@ -9,6 +9,7 @@ import AddQuiz from './AddQuiz'
 import ViewQuizzes from './ViewQuizzes'
 import AdminProfile from './AdminProfile'
 import AdminFeedback from './AdminFeedback'
+import CreateLiveClass from './CreateLiveClass'
 
 export {
     AddCourse,
@@ -21,5 +22,6 @@ export {
     AddQuiz,
     ViewQuizzes,
     AdminProfile,
-    AdminFeedback
+    AdminFeedback,
+    CreateLiveClass
 }

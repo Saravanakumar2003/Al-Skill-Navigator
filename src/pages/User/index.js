@@ -9,6 +9,7 @@ import EnrolledCoursePage from './EnrolledCoursePage'
 import CandidateForm from './CandidateForm'
 import Feedback from './Feedback'
 import CandidateReport from './CandidateReport';
+import LiveClasses from './LiveClasses'
 
 
 export {
@@ -23,4 +24,5 @@ export {
     CandidateForm,
     Feedback,
     CandidateReport,
+    LiveClasses
 }

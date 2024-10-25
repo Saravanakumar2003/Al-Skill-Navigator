@@ -25,6 +25,7 @@ const Sidebar = ({ role }) => {
         { name: 'View Quiz', icon: '🎓', path: '/admin/view-quiz' },
         { name: 'Profile Management', icon: '👤', path: '/admin/profile-management' },
         { name: 'Feedback', icon: '✍', path: '/admin/admin-feedback' },
+        { name: 'Live Classes', icon: '📟', path: '/admin/create-live-class' },
     ] : [
         { name: 'Dashboard', icon: '🏠', path: '/user' },
         { name: 'All Courses', icon: '📖', path: '/user/all-courses' },
@@ -35,6 +36,7 @@ const Sidebar = ({ role }) => {
         { name: 'Quiz', icon: '📝', path: '/user/quiz' },
         { name: 'Feedback', icon: '✍', path: '/user/feedback' }, 
         { name: 'Candidate Report', icon: '📊', path: '/user/candidate-report'},
+        { name: 'Live Classes', icon: '📟', path: '/user/live-classes' },
     ];
 
     return (

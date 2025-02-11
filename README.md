@@ -1,14 +1,11 @@
-# Hexaware AI Skill Navigator
+# AI Skill Navigator
 
-![Hexaware AI Skill Navigator](https://img.shields.io/badge/version-0.2-blue.svg)
+![AI Skill Navigator](https://img.shields.io/badge/version-0.2-blue.svg)
 
-## Team: Square_Velammal_Engg
-
-Welcome to the Hexaware AI Skill Navigator, a powerful platform designed to help users chart their learning journeys, enhance their skills, and achieve their career goals through AI-driven recommendations and gamified learning experiences.
+Welcome to the AI Skill Navigator, a powerful platform designed to help users chart their learning journeys, enhance their skills, and achieve their career goals through AI-driven recommendations and gamified learning experiences.
 
 ### Table of Contents
-- [Hexaware AI Skill Navigator](#hexaware-ai-skill-navigator)
-  - [Team: Square\_Velammal\_Engg](#team-square_velammal_engg)
+- [AI Skill Navigator](#ai-skill-navigator)
     - [Table of Contents](#table-of-contents)
   - [Project Overview](#project-overview)
   - [Features](#features)
@@ -21,14 +18,14 @@ Welcome to the Hexaware AI Skill Navigator, a powerful platform designed to help
   - [License](#license)
 
 ## Project Overview
-Hexaware AI Skill Navigator is an innovative application built to guide users through personalized learning paths using AI. The application is designed to help users improve their skills through interactive learning modules, real-time feedback, and collaborative tools. It integrates advanced technologies like Firebase and AI to provide a seamless and secure experience.
+AI Skill Navigator is an innovative application that guides users through personalized learning paths using AI. The application is designed to help users improve their skills through interactive learning modules, real-time feedback, and collaborative tools. It integrates advanced technologies like Firebase and AI to provide a seamless and secure experience.
 
 ## Features
 - **Authentication**: Google & GitHub authentication.
 - **Role-Centric Signup**: Users can sign up as Admin, or User.
 - **Profile Setup**: Candidates can set up profiles and store certificates securely in Firebase Storage.
 - **Security**: HiCaptcha integration to ensure secure access.
-- **Certifications**: Candidates will recieve certificates upon completion of courses.
+- **Certifications**: Candidates will receive certificates upon completion of courses.
 - **AI-Powered Learning Paths**: Personalized learning recommendations based on user profiles and performance.(In progress)
 - **Gamified Learning**: Leaderboards, badges, and goals with friends to encourage engagement. (In progress)
 
@@ -84,15 +81,15 @@ To get started with the project locally:
 ## Team Members
 
 
-| ![Contributor 1](https://via.placeholder.com/150?text=No+User+Image) | ![Contributor 2](https://via.placeholder.com/150?text=No+User+Image) | ![Contributor 3](https://via.placeholder.com/150?text=No+User+Image) |
-|:---------------------------------------------------------------:|:---------------------------------------------------------------:|:---------------------------------------------------------------:|
-| **[Bala Magesh Kumar S](https://github.com/Bala-Magesh)**       | **[Arunvel R](https://github.com/Arunvel975)**       | **[Yogeshwaran K]()**       |
-| AI Developer                                                    | UI/UX Designer                                       | Documentation and Testing   |
-
-
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
+## Disclaimer  
 
-Hexaware AI Skill Navigator © 2024 Square_Velammal_Engg. All rights reserved.
+This project is a **modified version** of [Learnify - Skill Up](https://github.com/Kashan-2912/Learnify-SkillUp) originally created by [Kashan-2912](https://github.com/Kashan-2912).  
+
+I have made modifications for **personal use and learning purposes**. **All rights to the original code and concept belong to the original author.**  
+
+🚨 **If you are the original creator and have any concerns, please get in touch with me, and I will take the necessary actions, including removal if required.**  
+

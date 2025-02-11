@@ -78,13 +78,9 @@ To get started with the project locally:
 - Enhance the gamification features with more interactive elements.
 - Scale the application to support more users and additional features.
 
-## Team Members
-
-
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
----
 ## Disclaimer  
 
 This project is a **modified version** of [Learnify - Skill Up](https://github.com/Kashan-2912/Learnify-SkillUp) originally created by [Kashan-2912](https://github.com/Kashan-2912).  
